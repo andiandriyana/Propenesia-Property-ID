@@ -5,88 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Propenesia Property ID</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Tambahan kecil untuk slider sederhana */
+    .slide-fade {
+      animation: fade 5s infinite;
+    }
+    @keyframes fade {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-md p-4">
+  <nav class="bg-black text-white shadow-md p-4 fixed w-full z-50">
     <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-xl font-bold text-blue-600">Propenesia Property ID</h1>
+      <h1 class="text-xl font-bold text-white">Propenesia Property ID</h1>
       <ul class="flex space-x-6">
-        <li><a href="#" class="hover:text-blue-600">Beranda</a></li>
-        <li><a href="#tentang" class="hover:text-blue-600">Tentang</a></li>
-        <li><a href="#properti" class="hover:text-blue-600">Properti</a></li>
-        <li><a href="#kontak" class="hover:text-blue-600">Kontak</a></li>
+        <li><a href="#beranda" class="hover:text-gray-400">Beranda</a></li>
+        <li><a href="#tentang" class="hover:text-gray-400">Tentang</a></li>
+        <li><a href="#galeri" class="hover:text-gray-400">Galeri</a></li>
+        <li><a href="#properti" class="hover:text-gray-400">Properti</a></li>
+        <li><a href="#kontak" class="hover:text-gray-400">Kontak</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="bg-blue-600 text-white py-20">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-4">Temukan Properti Impianmu</h2>
-      <p class="mb-6">Jual dan sewa properti dengan mudah bersama Propenesia Property ID</p>
-      <a href="#properti" class="bg-white text-blue-600 px-6 py-2 rounded hover:bg-gray-100 transition">Lihat Properti</a>
+  <section id="beranda" class="bg-gray-100 text-center py-32">
+    <div class="container mx-auto">
+      <h2 class="text-5xl font-bold mb-4">Temukan Properti Impianmu</h2>
+      <p class="mb-6 text-lg">Bersama Propenesia Property ID, solusi properti terpercaya Anda.</p>
+      <a href="#properti" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">Lihat Properti</a>
     </div>
   </section>
 
-  <!-- Tentang Section -->
-  <section id="tentang" class="py-16 bg-white">
+  <!-- Tentang Kami Section -->
+  <section id="tentang" class="py-20 bg-white">
     <div class="container mx-auto text-center">
-      <h3 class="text-3xl font-semibold mb-4">Tentang Kami</h3>
-      <p class="max-w-2xl mx-auto">Propenesia Property ID adalah platform properti terpercaya yang membantu masyarakat Indonesia menemukan properti ideal sesuai kebutuhan. Kami menghubungkan penjual, pembeli, dan penyewa dalam satu ekosistem digital.</p>
+      <h3 class="text-3xl font-semibold mb-6">Tentang Kami</h3>
+      <p class="max-w-2xl mx-auto">Propenesia Property ID adalah platform properti terpercaya di Indonesia, menghubungkan pembeli, penjual, dan penyewa dengan solusi terbaik. Kami menghubungkan penjual, pembeli, dan penyewa dalam satu ekosistem digital.</p>
     </div>
   </section>
 
-  <!-- Properti Section -->
-  <a href="https://www.rumah123.com/agen-properti/independent-property-agent/andi-andriyana-4342938/" target="_blank" class="block">
-    <div class="bg-white shadow rounded p-4 hover:shadow-lg transition">
-  <section id="properti" class="py-16 bg-gray-100">
+  <!-- Galeri Foto (Slider Pemanis) -->
+  <section id="galeri" class="py-20 bg-gray-100">
     <div class="container mx-auto text-center">
-      <h3 class="inline-block text-3xl font-bold text-blue-900 bg-white px-4 py-2 rounded hover:underline mb-8">Properti Unggulan</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Properti Card -->
-        <a href="https://www.rumah123.com/properti/jakarta-selatan/apr7269902/" target="_blank" class="block">
-          <div class="bg-white shadow rounded p-4 hover:shadow-lg transition">
-            <img src="https://raw.githubusercontent.com/andiandriyana/Propenesia-Property-ID/main/T338A%20R8.jpg" alt="Properti Residence 8" class="rounded mb-4" alt="Residence 8" class="rounded mb-4 w-full h-auto">
-            <h4 class="text-xl font-bold hover:underline mb-2">Disewakan Apartemen Mewah Di Residence 8 Tower 3, Unit 38-2a</h4>
-            <p class="text-sm text-black-700 text-left mb-2">
-              Disewakan apartemen mewah di Residence 8 Tower 3, unit 38-2A, Senopati – Jakarta Selatan. Luas 102 m², 2 kamar tidur dan 2 kamar mandi. Fully furnished dengan desain elegan. Lantai tinggi, view kota yang menawan.
-            </p>
-            <p class="text-sm text-black-700 text-left mb-2">
-              Fasilitas eksklusif:<br>
-              - Kolam renang, gym, sauna, jacuzzi<br>
-              - Lapangan tenis, jogging track, mini golf<br>
-              - Area BBQ, taman bermain anak<br>
-              - Minimarket, restoran, ATM center<br>
-              - Keamanan 24 jam & akses privat
-            </p>
-            <p class="text-sm text-black-700 text-left">
-              Lokasi premium, selangkah ke SCBD, Pacific Place, dan MRT Senayan. Ideal untuk profesional dan ekspatriat. Hubungi sekarang untuk info lebih lanjut atau jadwal survei.
-            </p>
-            <p class="text-sm text-black-500"><strong>Rp275.000.000 / Year (Negotiable)</strong></p>
-          </div>
-        </a>
+      <h3 class="text-3xl font-semibold mb-10">Galeri Properti</h3>
+      <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded shadow-lg">
+        <!-- Slider Wrapper -->
+        <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+          <img src="https://source.unsplash.com/800x500/?house" alt="Foto Properti 1" class="w-full flex-shrink-0">
+          <img src="https://source.unsplash.com/800x500/?villa" alt="Foto Properti 2" class="w-full flex-shrink-0">
+          <img src="https://source.unsplash.com/800x500/?apartment" alt="Foto Properti 3" class="w-full flex-shrink-0">
+        </div>
+
+        <!-- Tombol Navigasi -->
+        <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-800 transition">
+          &#8592;
+        </button>
+        <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-800 transition">
+          &#8594;
+        </button>
       </div>
     </div>
   </section>
 
+  <!-- Daftar Properti -->
+  <section id="properti" class="py-20 bg-white">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl font-semibold mb-8">Properti Unggulan</h3>
+      <a href="https://www.rumah123.com/agen-properti/independent-property-agent/andi-andriyana-4342938/" target="_blank" class="bg-black text-white px-8 py-4 rounded hover:bg-gray-800 transition text-lg">
+        Lihat Daftar Properti di Rumah123.com
+      </a>
+    </div>
+  </section>
+
   <!-- Kontak Section -->
-  <section id="kontak" class="py-16 bg-white">
+  <section id="kontak" class="py-20 bg-gray-100">
     <div class="container mx-auto text-center">
       <h3 class="text-3xl font-semibold mb-4">Hubungi Kami</h3>
-      <p class="mb-4">Ada pertanyaan? Hubungi kami kapan saja melalui email atau WhatsApp.</p>
-      <p>Email: <a href="mailto:andi.propenesia@gmail.com" class="text-blue-600">andi.propenesia@gmail.com</a></p>
-      <p>WhatsApp: <a href="https://wa.me/6281214395900" class="text-blue-600">+62 812-1439-5900</a></p>
+      <p class="mb-6">Ada pertanyaan? Hubungi kami melalui email atau WhatsApp.</p>
+      <p>Email: <a href="mailto:andi.propenesia@gmail.com" class="text-blue-600 hover:underline">andi.propenesia@gmail.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/6281214395900" class="text-blue-600 hover:underline">+62 812-1439-5900</a></p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6">
+  <footer class="bg-black text-white py-6">
     <div class="container mx-auto text-center">
       <p>&copy; 2025 Propenesia Property ID. All rights reserved.</p>
     </div>
   </footer>
 
-</body>
-</html>
+  <!-- JavaScript -->
+  <script>
+    const slider = document.getElementById('slider');
+    const slides = slider.children;
+    let index = 0;
+
+    // Fungsi untuk menampilkan slide berikutnya
+    function showNextSlide() {
+      index = (index + 1) % slides.length;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    // Fungsi untuk menampilkan slide sebelumnya
+    function showPrevSlide() {
+      index = (index - 1 + slides.length) % slides.length;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    // Event listener untuk tombol next dan prev
+    document.getElementById('next').addEventListener('click', showNextSlide);
+    document.getElementById('prev').addEventListener('click', show
