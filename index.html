@@ -7,20 +7,34 @@
   <title>Propenesia Property ID</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    /* Gaya untuk slider */
+    /* Slider Style */
     #slider {
-      width: 300%;
+      display: flex;
       transition: transform 0.7s ease-in-out;
     }
 
-    #slider img {
+    .slide {
+      flex: 0 0 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .slide img {
       width: 100%;
       height: 400px;
       object-fit: cover;
       cursor: pointer;
     }
 
-    /* Gaya untuk modal (lightbox) */
+    .property-name {
+      margin-top: 10px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Modal (Lightbox) Style */
     .modal {
       display: none;
       position: fixed;
@@ -34,18 +48,18 @@
       align-items: center;
     }
 
-    .modal img {
-      max-width: 90%;
-      max-height: 90%;
-    }
-
     .modal-content {
       position: relative;
       text-align: center;
-      color: white;
     }
 
-    .modal-content .close {
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+
+    .close {
       position: absolute;
       top: 10px;
       right: 20px;
@@ -55,9 +69,8 @@
       cursor: pointer;
     }
 
-    /* Responsif untuk gambar slider */
     @media (max-width: 768px) {
-      #slider img {
+      .slide img {
         height: 250px;
       }
     }
@@ -97,56 +110,46 @@
     </div>
   </section>
 
-  <!-- Galeri Foto (Slider dengan Nama) -->
+  <!-- Galeri Foto -->
   <section id="galeri" class="py-20 bg-gray-100">
     <div class="container mx-auto text-center">
       <h3 class="text-3xl font-semibold mb-10">Galeri Properti</h3>
       <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg">
-        <div id="slider" class="flex">
-          <div class="flex-shrink-0 relative group">
-            <img src="https://raw.githubusercontent.com/andiandriyana/Propenesia-Property-ID/main/kemang-mansion.jpg"
-              alt="Kemang Mansion" class="cursor-pointer" onclick="openModal('kemang-mansion.jpg')">
-            <p class="text-lg mt-2 text-black">Kemang Mansion</p>
+        <div id="slider">
+          <div class="slide">
+            <img src="https://raw.githubusercontent.com/andiandriyana/Propenesia-Property-ID/main/kemang-mansion.jpg" alt="Kemang Mansion" onclick="openModal('kemang-mansion.jpg')">
+            <p class="property-name">Kemang Mansion</p>
           </div>
-          <div class="flex-shrink-0 relative group">
-            <img src="https://raw.githubusercontent.com/andiandriyana/Propenesia-Property-ID/main/south-hills.jpg"
-              alt="South Hills Apartment" class="cursor-pointer" onclick="openModal('south-hills.jpg')">
-            <p class="text-lg mt-2 text-black">South Hills Apartment</p>
+          <div class="slide">
+            <img src="https://raw.githubusercontent.com/andiandriyana/Propenesia-Property-ID/main/south-hills.jpg" alt="South Hills Apartment" onclick="openModal('south-hills.jpg')">
+            <p class="property-name">South Hills Apartment</p>
           </div>
-          <div class="flex-shrink-0 relative group">
-            <img src="https://raw.githubusercontent.com/andiandriyana/Propenesia-Property-ID/main/setiabudi-sky-garden.jpg"
-              alt="Setiabudi Sky Garden" class="cursor-pointer" onclick="openModal('setiabudi-sky-garden.jpg')">
-            <p class="text-lg mt-2 text-black">Setiabudi Sky Garden</p>
+          <div class="slide">
+            <img src="https://raw.githubusercontent.com/andiandriyana/Propenesia-Property-ID/main/setiabudi-sky-garden.jpg" alt="Setiabudi Sky Garden" onclick="openModal('setiabudi-sky-garden.jpg')">
+            <p class="property-name">Setiabudi Sky Garden</p>
           </div>
         </div>
 
         <!-- Tombol Navigasi -->
-        <button id="prev"
-          class="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-full shadow hover:bg-gray-700 z-10">
-          &#8592;
-        </button>
-        <button id="next"
-          class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-full shadow hover:bg-gray-700 z-10">
-          &#8594;
-        </button>
+        <button id="prev" class="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-full shadow hover:bg-gray-700 z-10">&#8592;</button>
+        <button id="next" class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded-full shadow hover:bg-gray-700 z-10">&#8594;</button>
       </div>
     </div>
   </section>
 
   <!-- Modal (Lightbox) -->
   <div id="modal" class="modal flex">
-    <div class="modal-content relative bg-black p-4 rounded-lg">
-      <span class="close text-white absolute top-0 right-0 p-4 cursor-pointer" onclick="closeModal()">&times;</span>
-      <img id="modal-img" src="" alt="Properti" class="max-w-full max-h-full object-contain">
+    <div class="modal-content relative">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="Properti">
     </div>
   </div>
 
-  <!-- Daftar Properti -->
+  <!-- Properti Unggulan -->
   <section id="properti" class="py-20 bg-white">
     <div class="container mx-auto text-center">
       <h3 class="text-3xl font-semibold mb-8">Properti Unggulan</h3>
-      <a href="https://www.rumah123.com/agen-properti/independent-property-agent/andi-andriyana-4342938/" target="_blank"
-        class="bg-black text-white px-8 py-4 rounded hover:bg-gray-800 transition text-lg">
+      <a href="https://www.rumah123.com/agen-properti/independent-property-agent/andi-andriyana-4342938/" target="_blank" class="bg-black text-white px-8 py-4 rounded hover:bg-gray-800 transition text-lg">
         Lihat Daftar Properti (Klik sini)
       </a>
     </div>
@@ -172,32 +175,28 @@
   <!-- JavaScript -->
   <script>
     const slider = document.getElementById('slider');
-    const slides = slider.children;
+    const slides = document.querySelectorAll('.slide');
     let index = 0;
 
-    // Fungsi untuk menampilkan slide berikutnya
-    function showNextSlide() {
+    function showSlide(idx) {
+      slider.style.transform = `translateX(-${idx * 100}%)`;
+    }
+
+    document.getElementById('next').addEventListener('click', () => {
       index = (index + 1) % slides.length;
-      slider.style.transform = `translateX(-${index * 100}%)`;
-    }
+      showSlide(index);
+    });
 
-    // Fungsi untuk menampilkan slide sebelumnya
-    function showPrevSlide() {
+    document.getElementById('prev').addEventListener('click', () => {
       index = (index - 1 + slides.length) % slides.length;
-      slider.style.transform = `translateX(-${index * 100}%)`;
-    }
+      showSlide(index);
+    });
 
-    // Event listener untuk tombol next dan prev
-    document.getElementById('next').addEventListener('click', showNextSlide);
-    document.getElementById('prev').addEventListener('click', showPrevSlide);
-
-    // Fungsi untuk membuka modal (lightbox)
-    function openModal(image) {
+    function openModal(imageName) {
       document.getElementById('modal').style.display = 'flex';
-      document.getElementById('modal-img').src = `https://raw.githubusercontent.com/andiandriyana/Propenesia-Property-ID/main/${image}`;
+      document.getElementById('modal-img').src = `https://raw.githubusercontent.com/andiandriyana/Propenesia-Property-ID/main/${imageName}`;
     }
 
-    // Fungsi untuk menutup modal (lightbox)
     function closeModal() {
       document.getElementById('modal').style.display = 'none';
     }
